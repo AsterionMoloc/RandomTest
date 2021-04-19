@@ -24,7 +24,6 @@ public class RandomTest {
     String address=faker.address().fullAddress();
     String birthDay=String.valueOf(getRandomInt(1,31));
     String birthYear=String.valueOf(getRandomInt(1985,2005));
-    // birthYear=String.valueOf(getRandomInt(1985,2005));
 
     @Test
     public void Random (){
@@ -45,12 +44,7 @@ public class RandomTest {
         if (birthDay.length() == 1) birthDay = "0" + birthDay;
         $x("//div/select[@class='react-datepicker__month-select']").selectOption("January");
         $x("//div/select[@class='react-datepicker__year-select']").selectOption(birthYear);
-        //$x("//div[contains(@class,'react-datepicker__day--012')]").click();
         $x("//div[contains(@class,'react-datepicker__day--0" + birthDay + "')]").click();
-
-        //$x("//select[@class='react-datepicker__year-select']").selectOption(dateOfBirthYear);
-        //$x("//select[@class='react-datepicker__month-select']").selectOption(dateOfBirthMonth);
-
 
         //установить язык
         $x("//input[@id = 'subjectsInput']").val("Hin");
