@@ -7,7 +7,6 @@ import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.Selenide.$x;
 import static utils.RandomUtils.getRandomInt;
 import static utils.RandomUtils.getRandomPhone;
 
@@ -28,7 +27,7 @@ public class RandomTest {
     // birthYear=String.valueOf(getRandomInt(1985,2005));
 
     @Test
-    public void RandomTest(){
+    public void Random (){
         //открыть форму регистрации
         open("https://demoqa.com/automation-practice-form");
         //установить данные для входа (имя, фамилия, email)
